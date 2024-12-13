@@ -1,0 +1,11 @@
+--- 
+title: "jsPsych Analaytics"
+type: website
+output-dir: docs
+format:
+    dashboard:
+        logo: img/jspsych-logo-no-text-mono.svg
+        nav-buttons: 
+            - icon: github
+        href: https://github.com/jspsych/jsPsych/tree/main
+---
