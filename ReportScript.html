@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>JsPsych Analysis</title>
+<title>jsPsych Analaytics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -66,7 +32,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="ReportScript_files/libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="ReportScript_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="ReportScript_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ReportScript_files/libs/bootstrap/bootstrap-1d66fb96ba82567d8421a4abc58ee41d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="ReportScript_files/libs/bootstrap/bootstrap-652b3cafd4960f8dd2d2b25e4b669125.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="ReportScript_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="ReportScript_files/libs/quarto-dashboard/stickythead.js"></script>
+<script src="ReportScript_files/libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="ReportScript_files/libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="ReportScript_files/libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="ReportScript_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="ReportScript_files/libs/quarto-dashboard/components.js"></script>
+<link href="ReportScript_files/libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -74,73 +48,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body class="quarto-dashboard dashboard-fill fullcontent">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">JsPsych Analysis</h1>
-</div>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
+    <div class="navbar-brand-container">       
+    <a href="#"><img src="img/jspsych-logo-no-text-mono.svg" alt="" class="navbar-logo d-inline-block"></a>
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">jsPsych Analaytics</a></div>
+        
+        
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-caching-and-sorting" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#caching-and-sorting" data-scrolling="false" href="#caching-and-sorting" aria-controls="caching-and-sorting" aria-selected="true"><span class="nav-link-text">Caching and Sorting</span></a></li><li class="nav-item" role="presentation"><a id="tab-issue-reporting" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#issue-reporting" data-scrolling="false" href="#issue-reporting" aria-controls="issue-reporting" aria-selected="false"><span class="nav-link-text">Issue Reporting</span></a></li><li class="nav-item" role="presentation"><a id="tab-pr-reporting" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#pr-reporting" data-scrolling="false" href="#pr-reporting" aria-controls="pr-reporting" aria-selected="false"><span class="nav-link-text">PR Reporting</span></a></li><li class="nav-item" role="presentation"><a id="tab-generating-reports-w-quarto" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#generating-reports-w-quarto" data-scrolling="false" href="#generating-reports-w-quarto" aria-controls="generating-reports-w-quarto" aria-selected="false"><span class="nav-link-text">Generating Reports w/ Quarto</span></a></li></ul><div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="undefined"><i class="bi bi-github"></i></a></div></div></div>
+</nav>
 </header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
 
-
-<div id="cell-1" class="cell" data-execution_count="5">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Global Priority List:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#notation:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#[~] means triage</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#[X] means done</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#[!] means priority</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># to-do scripting:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># [~] make a universal function to fetch pulls and issues</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] get all pull requests and issues using batches (also think about if we can use some sort of caching to do it in a more efficient way)</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] write another function to compute average time between issues and responses for every three months</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># to-do fix:</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] sort pulls from issues because the boolean doesn't seem to be doing its job</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># to-do data:</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># [!] visualize issue opening per year / per every 3 months</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] visualize issues left open per year, as of report request date</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># [!] visualize interaction across issues, sorted most to least interaction</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># [~] flag issues ignored for too long (or, if contextually relevant, past average interaction time)</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># [ ] flag issues whose average interaction times are outliers</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># [~] flag issues with more interactions (i.e. comments) than typical</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># [ ] flag when average interaction time ACROSS ISSUES has changed considerably since last logged (determine frequency/triggers)</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># samip tasklist, if he has time:</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] clean bottom print lists into more legible dataframes, including number of comments for issues left open</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] color-code scatterplot, one color for open issues, the other color for closed issues</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] clean up some of the earlier figures for legibility</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">#   - if you get the chance to figure out how to begin normalizing the interaction time figure, that could be awesome</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># [ ] fix wording in functions to avoid confusion, apply generally to all entries (issues &amp; pull requests)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-2" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-error html-fill-item html-fill-container">
+<div class="ansi-escaped-output html-fill-item html-fill-container">
 <pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[3], line 1</span>
 <span class="ansi-red-fg">    ---</span>
        ^
@@ -149,543 +84,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="functions" class="level1">
-<h1><strong>Functions</strong></h1>
-<section id="cache-sorting" class="level3">
-<h3 class="anchored" data-anchor-id="cache-sorting">Cache Sorting</h3>
-<div id="cell-5" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#get all data from jsPsych repo</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#note: this excludes anything in jsPsych -contrib repo</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_api(url):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  final_data <span class="op">=</span> []</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> url:</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(url)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> response.json()</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> item <span class="kw">in</span> data:</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      final_data.append(item)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">#check for another response page</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'next'</span> <span class="kw">in</span> response.links:</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>      url <span class="op">=</span> response.links[<span class="st">'next'</span>][<span class="st">'url'</span>]</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> final_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-6" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fix: sort pull_requests yearly as well; see if we can do this without having to comb through initially</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_entries(cache):</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    issues <span class="op">=</span> []</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    issue_index <span class="op">=</span> []</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    prs <span class="op">=</span> []</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    pr_index <span class="op">=</span> []</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    year_index <span class="op">=</span> []</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    year_cache <span class="op">=</span> [[[]],[[],[]]]</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#first sublist: issues</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">#second sublist: prs</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">#in each sublist -</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      <span class="co">#first subsublist: index no.</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      <span class="co">#second subsublist: entry</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> item <span class="kw">in</span> cache:</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="st">'pull_request'</span> <span class="kw">in</span> item:</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        dest_list <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        dest_list <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>      dt <span class="op">=</span> datetime.datetime.strptime(item[<span class="st">'created_at'</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%SZ"</span>)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>      year <span class="op">=</span> dt.year</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>      url <span class="op">=</span> item[<span class="st">'url'</span>]</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>      num <span class="op">=</span> <span class="bu">int</span>(url.split(<span class="st">'/'</span>)[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      <span class="co">#fix: dear god there has to be a more elegant way to do this conditionals</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> item<span class="op">==</span>cache[<span class="op">-</span><span class="dv">1</span>]:</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">#set-up for last update</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        year_cache[dest_list][<span class="dv">0</span>].append(num)</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>        year_cache[dest_list][<span class="dv">1</span>].append(item)</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> item<span class="op">==</span>cache[<span class="op">-</span><span class="dv">1</span>] <span class="kw">or</span> (item<span class="op">!=</span>cache[<span class="dv">0</span>] <span class="kw">and</span> year <span class="kw">not</span> <span class="kw">in</span> year_index):</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>        <span class="co">#update sorted outputs</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        issue_index.append(year_cache[<span class="dv">0</span>][<span class="dv">0</span>])</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        issues.append(year_cache[<span class="dv">0</span>][<span class="dv">1</span>])</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>        pr_index.append(year_cache[<span class="dv">1</span>][<span class="dv">0</span>])</span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        prs.append(year_cache[<span class="dv">1</span>][<span class="dv">1</span>])</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> year <span class="kw">not</span> <span class="kw">in</span> year_index:</span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>        <span class="co">#add new year</span></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>        year_index.append(year)</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>        <span class="co">#reset year_cache</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>        year_cache[dest_list] <span class="op">=</span> [[num],[item]]</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>        year_cache[<span class="bu">abs</span>(dest_list<span class="op">-</span><span class="dv">1</span>)] <span class="op">=</span> [[],[]]</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>        year_cache[dest_list][<span class="dv">0</span>].append(num)</span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>        year_cache[dest_list][<span class="dv">1</span>].append(item)</span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [year_index, issue_index, issues, pr_index, prs]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-7" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> comments_by_issue(comments):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    comments_sorted <span class="op">=</span> []</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    comments_issnums <span class="op">=</span> []</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> com <span class="kw">in</span> comments:</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      iss_url <span class="op">=</span> com[<span class="st">'issue_url'</span>]</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      iss_num <span class="op">=</span> <span class="bu">int</span>(iss_url.split(<span class="st">'/'</span>)[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> iss_num <span class="kw">in</span> comments_issnums:</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        comments_sorted[comments_issnums.index(iss_num)].append(com)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        comments_sorted.append([com])</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        comments_issnums.append(iss_num)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [comments_issnums, comments_sorted]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="dataframe-set-ups" class="level3">
-<h3 class="anchored" data-anchor-id="dataframe-set-ups">Dataframe Set-ups</h3>
-<div id="cell-9" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#just defining functions for last cell; literally run it whenever you want, i do not care</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#you could even do it for fun</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seconds(tdelta):</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> tdelta.total_seconds()</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>total_seconds <span class="op">=</span> np.vectorize(seconds)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> wait_breakdown(sec_diff):</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  days <span class="op">=</span> sec_diff <span class="op">/</span> <span class="dv">3600</span> <span class="op">/</span> <span class="dv">24</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  day_diff <span class="op">=</span> <span class="bu">int</span>(days)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  hour_diff <span class="op">=</span> <span class="bu">int</span>((days <span class="op">-</span> day_diff) <span class="op">*</span> <span class="dv">24</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  min_diff <span class="op">=</span> <span class="bu">int</span>(((days <span class="op">-</span> day_diff) <span class="op">*</span> <span class="dv">24</span> <span class="op">-</span> hour_diff) <span class="op">*</span> <span class="dv">60</span>)</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span>day_diff<span class="sc">}</span><span class="ss"> days, </span><span class="sc">{</span>hour_diff<span class="sc">}</span><span class="ss"> hours, and </span><span class="sc">{</span>min_diff<span class="sc">}</span><span class="ss"> minutes'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-10" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#only works if all the above is run</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> report_frame(issues, issue_index, commented_issues, comments):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  report <span class="op">=</span> []</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> y, year <span class="kw">in</span> <span class="bu">enumerate</span>(issues):</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> []</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, iss <span class="kw">in</span> <span class="bu">enumerate</span>(year):</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      iss_dic <span class="op">=</span> {}</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      iss_dic[<span class="st">'Issue No.'</span>] <span class="op">=</span> issue_index[y][i]</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      <span class="co">#get date created</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>      created_at <span class="op">=</span> datetime.datetime.strptime(iss[<span class="st">'created_at'</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%SZ"</span>)</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      iss_dic[<span class="st">'Created At'</span>] <span class="op">=</span> created_at</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      dates <span class="op">=</span> np.array([created_at])</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>      <span class="co">#get comment dates if there are comments</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>      <span class="co">#NOTE: commented_issues is used here to connect comments to their issues according to issue number</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   - this helps get comment dates and calculate average interaction time later in this same cell</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> iss_dic[<span class="st">'Issue No.'</span>] <span class="kw">in</span> commented_issues:</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        iss_comments <span class="op">=</span> comments[commented_issues.index(iss_dic[<span class="st">'Issue No.'</span>])]</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        com_qt <span class="op">=</span> <span class="bu">len</span>(iss_comments)</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Number of Comments'</span>] <span class="op">=</span> com_qt</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> com <span class="kw">in</span> iss_comments:</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>          com_date <span class="op">=</span> datetime.datetime.strptime(com[<span class="st">'created_at'</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%SZ"</span>)</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>          dates <span class="op">=</span> np.append(dates, com_date)</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Number of Comments'</span>] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>      <span class="co">#get date closed if closed</span></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> iss[<span class="st">'closed_at'</span>]:</span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>        closed_at <span class="op">=</span> datetime.datetime.strptime(iss[<span class="st">'closed_at'</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%SZ"</span>)</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Closed At'</span>] <span class="op">=</span> closed_at</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>        dates <span class="op">=</span> np.append(dates, closed_at)</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Closed At'</span>] <span class="op">=</span> <span class="st">'Still Open'</span></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      <span class="co">#get average interaction time on issue</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>      <span class="co">#FIX: check for redundancy</span></span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="bu">len</span>(dates) <span class="op">&gt;</span> <span class="dv">1</span>:</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>        time_diffs <span class="op">=</span> dates[<span class="dv">1</span>:] <span class="op">-</span> dates[:<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>        time_diffs <span class="op">=</span> total_seconds(time_diffs)</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>        avg_time_diff <span class="op">=</span> np.mean(time_diffs)</span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Average Interaction Time'</span>] <span class="op">=</span> wait_breakdown(avg_time_diff)</span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> iss_dic[<span class="st">'Closed At'</span>] <span class="op">==</span> <span class="st">'Still Open'</span>:</span>
-<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>          today <span class="op">=</span> datetime.datetime.today()</span>
-<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>          open_time <span class="op">=</span> seconds(today <span class="op">-</span> created_at)</span>
-<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>          iss_dic[<span class="st">'Ignored For'</span>] <span class="op">=</span> wait_breakdown(open_time)</span>
-<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>          iss_dic[<span class="st">'Ignored For'</span>] <span class="op">=</span> <span class="st">'Closed'</span></span>
-<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>        today <span class="op">=</span> datetime.datetime.today()</span>
-<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>        ignore_time <span class="op">=</span> seconds(today <span class="op">-</span> created_at)</span>
-<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Ignored For'</span>] <span class="op">=</span> wait_breakdown(ignore_time)</span>
-<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>        iss_dic[<span class="st">'Average Interaction Time'</span>] <span class="op">=</span> <span class="st">'No interaction'</span></span>
-<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>      data.append(iss_dic)</span>
-<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    report.append(pd.DataFrame(data))</span>
-<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> report</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-11" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] visualize issue opening per year / per every 3 months</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [Samip] goes through the issue report and count how many in each quarter for each year and return a list where each item is a year, and inside each year, we have counts for each of the 4 quarters.</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> issues_by_quarter(issue_report):</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    quarters <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">10</span>]</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    issues_per_quarter <span class="op">=</span> []</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> year_data <span class="kw">in</span> issue_report:</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        year_data <span class="op">=</span> year_data.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        year_quarter_counts <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> issue <span class="kw">in</span> year_data:</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>            created_month <span class="op">=</span> issue[<span class="st">'Created At'</span>].month</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>            quart <span class="op">=</span> <span class="bu">max</span>(month <span class="cf">for</span> month <span class="kw">in</span> quarters <span class="cf">if</span> month <span class="op">&lt;=</span> created_month)</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>            quarter_index <span class="op">=</span> quarters.index(quart)</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>            year_quarter_counts[quarter_index] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        issues_per_quarter.append(year_quarter_counts)</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> issues_per_quarter</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-12" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avg_time_quarterly(issue_report):</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  data <span class="op">=</span> []</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  quarters <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">10</span>]</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> year <span class="kw">in</span> issue_report:</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    data_year <span class="op">=</span> [[], [], [], []]</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">#turn Dataframe back into dictionary</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    year <span class="op">=</span> year.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> iss <span class="kw">in</span> year:</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> iss[<span class="st">'Average Interaction Time'</span>] <span class="op">!=</span> <span class="st">'No interaction'</span>:</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        quart <span class="op">=</span> <span class="bu">max</span>(month <span class="cf">for</span> month <span class="kw">in</span> quarters <span class="cf">if</span> month <span class="op">&lt;=</span> iss[<span class="st">'Created At'</span>].month)</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">#turns string back into aggregate minutes</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        <span class="co">#some seconds get shaved out of consideration; can't be fix w.o changing issue_timedata() itself</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        minutes <span class="op">=</span> re.findall(<span class="vs">r'-?\d+'</span>, iss[<span class="st">'Average Interaction Time'</span>])</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        minutes <span class="op">=</span> [<span class="bu">int</span>(num) <span class="cf">for</span> num <span class="kw">in</span> minutes]</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        minutes <span class="op">=</span> (minutes[<span class="dv">0</span>]<span class="op">*</span><span class="dv">60</span><span class="op">*</span><span class="dv">24</span>) <span class="op">+</span> (minutes[<span class="dv">1</span>]<span class="op">*</span><span class="dv">60</span>) <span class="op">+</span> minutes[<span class="dv">2</span>]</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        data_year[quarters.index(quart)].append(minutes)</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    data.append([np.mean(quarter) <span class="cf">for</span> quarter <span class="kw">in</span> data_year])</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="data-characterizations" class="level3">
-<h3 class="anchored" data-anchor-id="data-characterizations">Data characterizations</h3>
-<div id="cell-14" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#characterization: issues with more commentary than usual</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gthan_ten(issue_report):</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  gthan_list <span class="op">=</span> []</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># entries = 0</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> year <span class="kw">in</span> issue_report:</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    year <span class="op">=</span> year.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> entry <span class="kw">in</span> year:</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> entry[<span class="st">'Number of Comments'</span>] <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        gthan_list.append(entry)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># print(entry['Issue No.'], entry['Created At'], entry['Number of Comments'], entry['Closed At'])</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># e = e + 1</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> pd.DataFrame(gthan_list)</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"There are </span><span class="sc">{</span><span class="bu">len</span>(gthan_list)<span class="sc">}</span><span class="ss"> issues with more than 10 comments"</span>)</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-15" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#characterization: issues with no commentary</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> zero_comments(issue_report):</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  zero_comments_list <span class="op">=</span> []</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> year <span class="kw">in</span> issue_report:</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    year <span class="op">=</span> year.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> entry <span class="kw">in</span> year:</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> entry[<span class="st">'Number of Comments'</span>] <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        zero_comments_list.append(entry)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> pd.DataFrame(zero_comments_list)</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"There are </span><span class="sc">{</span><span class="bu">len</span>(zero_comments_list)<span class="sc">}</span><span class="ss"> issues with 0 comments"</span>)</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-16" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [Samip] how do we sort???</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># characterization: issues left open for at least 3-5 years</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> open_awhile(issue_report):</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  open_awhile_list <span class="op">=</span> []</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> year <span class="kw">in</span> issue_report:</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    year <span class="op">=</span> year.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> entry <span class="kw">in</span> year:</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> entry[<span class="st">'Ignored For'</span>] <span class="op">!=</span> <span class="st">'Closed'</span> <span class="kw">and</span> entry[<span class="st">'Created At'</span>].year <span class="op">&lt;=</span> <span class="dv">2021</span>:</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        open_awhile_list.append(entry)</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"There are </span><span class="sc">{</span><span class="bu">len</span>(open_awhile_list)<span class="sc">}</span><span class="ss"> issues which are left open for at least 3-5 years"</span>)</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> pd.DataFrame(open_awhile_list)</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-17" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grab_open_issues(issues_report):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  open_issues <span class="op">=</span> []</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> y, year <span class="kw">in</span> <span class="bu">enumerate</span>(issue_report):</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    year <span class="op">=</span> year.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> iss <span class="kw">in</span> year:</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      i <span class="op">=</span> year.index(iss)</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> iss[<span class="st">'Ignored For'</span>] <span class="op">!=</span> <span class="st">'Closed'</span>:</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        iss_data <span class="op">=</span> {}</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        iss_data[<span class="st">'Issue Number'</span>] <span class="op">=</span> issue_index[y][i]</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        iss_data[<span class="st">'Created At'</span>] <span class="op">=</span> iss[<span class="st">'Created At'</span>]</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        iss_data[<span class="st">'Ignored For'</span>] <span class="op">=</span> iss[<span class="st">'Ignored For'</span>]</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        open_issues.append(iss_data)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> open_issues</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="visualization" class="level3">
-<h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
-<div id="cell-19" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># line graph will def fix the overlap and the time sereis issues; let's try that!</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># v2.0. colors needs to be diff. considering scale, let's just use random solid colors</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># this is so beautiful, samip; I'll go ahead and try to fix the y-axis for human legibility a bit, but otherwise, great fix</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_line_avg_time(quarterly_response_time, years):</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    quarters <span class="op">=</span> [<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'Q4'</span>]</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    num_years <span class="op">=</span> <span class="bu">len</span>(years)</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    colors <span class="op">=</span> plt.cm.viridis(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, num_years))</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y, year_data <span class="kw">in</span> <span class="bu">enumerate</span>(quarterly_response_time):</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        plt.plot(quarters, year_data, label<span class="op">=</span><span class="ss">f'Year </span><span class="sc">{</span>years[y]<span class="sc">}</span><span class="ss">'</span>, marker<span class="op">=</span><span class="st">'o'</span>, color<span class="op">=</span>colors[y])</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">'Average Interaction Time per Quarter Over Multiple Years'</span>)</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Quarter'</span>)</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Average Interaction Time (minutes)'</span>)</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    plt.legend(title<span class="op">=</span><span class="st">'Year'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="fl">0.5</span>), loc<span class="op">=</span><span class="st">'center left'</span>)</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-20" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#i can probably use the way you set this up to make maneuvering between dictionary to dataframe and back more efficient, less unwieldy</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_issues_by_quarter(issues_per_quarter, start_year<span class="op">=</span><span class="dv">2013</span>):</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    years <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(start_year, start_year <span class="op">+</span> <span class="bu">len</span>(issue_report)))</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    quarters <span class="op">=</span> [<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'Q4'</span>]</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame(issues_per_quarter, columns<span class="op">=</span>quarters, index<span class="op">=</span>years)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> df.plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'Issues Opened Per Year by Quarter'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Year'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Number of Issues Opened'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    ax.legend(title<span class="op">=</span><span class="st">'Quarters'</span>)</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-21" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_open_issues(open_issues):</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    years <span class="op">=</span> [iss[<span class="st">'Created At'</span>].year <span class="cf">for</span> iss <span class="kw">in</span> open_issues]</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    year_counts <span class="op">=</span> pd.Series(years).value_counts().sort_index()</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    ax.bar(year_counts.index, year_counts.values, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'Open Issues per Year'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Year'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Number of Open Issues'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks(year_counts.index)</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout(pad<span class="op">=</span><span class="fl">4.0</span>)</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-22" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> os <span class="im">import</span> close</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_issues_by_comments(issue_report, issue_index): <span class="co">#fix: at this point, i should just integrate iss numbers in issue report above</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  iss_nums <span class="op">=</span> []</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  com_quans <span class="op">=</span> []</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  open_issues <span class="op">=</span> []</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  closed_issues <span class="op">=</span> []</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  closed_at <span class="op">=</span> []</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> year <span class="kw">in</span> issue_report:</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    year <span class="op">=</span> year.to_dict(<span class="st">'records'</span>)</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> entry <span class="kw">in</span> year: <span class="co">#fix: can this be more efficiently written using [f(x) for x in lst]?</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> entry[<span class="st">'Closed At'</span>] <span class="op">==</span> <span class="st">'Still Open'</span>:</span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        open_issues.append(entry[<span class="st">'Issue No.'</span>])</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>        closed_at.append(<span class="st">'Still Open'</span>)</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>        closed_issues.append(entry[<span class="st">'Issue No.'</span>])</span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>        closed_at.append(<span class="st">'Closed'</span>)</span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>      iss_nums.append(entry[<span class="st">'Issue No.'</span>])</span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>      com_quans.append(entry[<span class="st">'Number of Comments'</span>])</span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> pd.DataFrame({<span class="st">'Issue No.'</span>: iss_nums, <span class="st">'Number of Comments'</span>: com_quans,<span class="st">"Status"</span>: closed_at})</span>
-<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>  fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  open_df <span class="op">=</span> df[df[<span class="st">'Status'</span>] <span class="op">==</span> <span class="st">'Still Open'</span>]</span>
-<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  ax.scatter(open_df[<span class="st">'Issue No.'</span>], open_df[<span class="st">'Number of Comments'</span>], color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Open Issues'</span>)</span>
-<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>  closed_df <span class="op">=</span> df[df[<span class="st">'Status'</span>] <span class="op">==</span> <span class="st">'Closed'</span>]</span>
-<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>  ax.scatter(closed_df[<span class="st">'Issue No.'</span>], closed_df[<span class="st">'Number of Comments'</span>], color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'Closed Issues'</span>)</span>
-<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>  ax.set_title(<span class="st">'Issue Comments'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>  ax.set_xlabel(<span class="st">'Issue No.'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>  ax.set_ylabel(<span class="st">'Number of Comments'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>  plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>  plt.tight_layout()</span>
-<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>  plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-</section>
-<section id="caching-and-sorting" class="level1">
-<h1><strong>Caching and Sorting</strong></h1>
-<div id="cell-24" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://api.github.com/repos/jspsych/jsPsych/issues?pulls=false&amp;state=all&amp;per_page=100"</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>cache <span class="op">=</span> fetch_api(url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-25" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#grab all comments from comment endpoint</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://api.github.com/repos/jspsych/jsPsych/issues/comments?per_page=100"</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>comments_cache <span class="op">=</span> fetch_api(url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-26" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sorted_cache <span class="op">=</span> sort_entries(cache)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#key variables for all that follows</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> sorted_cache[<span class="dv">0</span>]</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>issue_index <span class="op">=</span> sorted_cache[<span class="dv">1</span>]</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>issues <span class="op">=</span> sorted_cache[<span class="dv">2</span>]</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>pr_index <span class="op">=</span> sorted_cache[<span class="dv">3</span>]</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>prs <span class="op">=</span> sorted_cache[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-27" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#redefine comments; define new variables (commented_issues)</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>comments <span class="op">=</span> comments_by_issue(comments_cache) <span class="co">#[Samip] was passing comments, that resulsts in a name error --&gt; changed to passing comments_cache</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                                              <span class="co">#[Valeria] good catch, thanks!</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>commented_issues <span class="op">=</span> comments[<span class="dv">0</span>]</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>comments <span class="op">=</span> comments[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="issue-reporting" class="level1">
-<h1><strong>Issue Reporting</strong></h1>
-<section id="frames" class="level3">
-<h3 class="anchored" data-anchor-id="frames">Frames</h3>
-<div id="cell-30" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#It's the BIG CHEESE HIMSELF!!!</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>issue_report <span class="op">=</span> report_frame(issues, issue_index, commented_issues, comments)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="cell-31" class="cell" data-outputid="3a5d8859-e520-4ca9-fa76-cc062d8e6dbc">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#issue_report[0] is for 2024 (or current year), issue_report[1] is 2023, issue_report[2] is 2022, etc. until 2013</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>issue_report[<span class="dv">11</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<!-- # **Functions** -->
+<div id="caching-and-sorting" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-caching-and-sorting">
 
-  <div id="df-cf5a8cf2-551d-47b1-bd99-85b940ea2ba0" class="colab-df-container">
-    <div>
+</div>
+<div id="issue-reporting" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-issue-reporting">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="22">
+
+  <div id="df-cf5a8cf2-551d-47b1-bd99-85b940ea2ba0" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -831,9 +249,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-cf5a8cf2-551d-47b1-bd99-85b940ea2ba0')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -909,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-db864202-7228-439d-a11d-898ee940aa99">
+<div id="df-db864202-7228-439d-a11d-898ee940aa99" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-db864202-7228-439d-a11d-898ee940aa99')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -1037,23 +455,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-32" class="cell" data-outputid="d458bcd5-bf3b-4c8e-c701-8def3f356d95">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [ ] flag issues ignored for too long (or, if contextually relevant, past average interaction time)</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># NOTES:</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - as is, a basic list of issues left open seems of marginal utility, given how many issues there have been left open over the years</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - maybe try aggregating by year? compare with issues opened each year?</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - for actual tracking purposes, it might be useful to limit flagging to just fresh issues (get flagged once left for alone &amp; open after, say, 1 week)</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>open_issues <span class="op">=</span> grab_open_issues(issue_report)</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(open_issues)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="23">
 
-  <div id="df-c42ccae1-8516-4ae9-9a1e-1d034b92ddf8" class="colab-df-container">
-    <div>
+  <div id="df-c42ccae1-8516-4ae9-9a1e-1d034b92ddf8" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -1137,9 +549,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>127 rows × 3 columns</p>
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-c42ccae1-8516-4ae9-9a1e-1d034b92ddf8')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -1215,7 +627,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-1172f829-e989-4c3c-9576-c8c50b0412ef">
+<div id="df-1172f829-e989-4c3c-9576-c8c50b0412ef" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-1172f829-e989-4c3c-9576-c8c50b0412ef')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -1343,18 +755,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-33" class="cell" data-outputid="50056d76-2c7f-4644-bd2c-b53a7a511a1a">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>gthan_ten(issue_report)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
 <pre><code>There are 20 issues with more than 10 comments</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="24">
 
-  <div id="df-6348d7cf-5c58-42f8-90c6-14e97d33f064" class="colab-df-container">
-    <div>
+  <div id="df-6348d7cf-5c58-42f8-90c6-14e97d33f064" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -1554,9 +968,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-6348d7cf-5c58-42f8-90c6-14e97d33f064')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -1632,7 +1046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-b7e969bd-d5df-491b-b9cd-b3fea5837a68">
+<div id="df-b7e969bd-d5df-491b-b9cd-b3fea5837a68" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-b7e969bd-d5df-491b-b9cd-b3fea5837a68')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -1760,18 +1174,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-34" class="cell" data-outputid="2a541207-072a-45cb-ba08-4bf720f057f5">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>zero_comments(issue_report)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
 <pre><code>There are 346 issues with 0 comments</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="25">
 
-  <div id="df-0ac68387-5c59-4907-b92c-5edd118158a7" class="colab-df-container">
-    <div>
+  <div id="df-0ac68387-5c59-4907-b92c-5edd118158a7" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -1891,9 +1307,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>346 rows × 6 columns</p>
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-0ac68387-5c59-4907-b92c-5edd118158a7')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -1969,7 +1385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-9d40fd82-4e4a-4668-a6b0-49be1fd6a40d">
+<div id="df-9d40fd82-4e4a-4668-a6b0-49be1fd6a40d" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-9d40fd82-4e4a-4668-a6b0-49be1fd6a40d')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -2097,18 +1513,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-35" class="cell" data-outputid="2810a5a9-efb5-4d78-c9c1-42c04d5015b4">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>open_awhile(issue_report)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
 <pre><code>There are 46 issues which are left open for at least 3-5 years</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="26">
 
-  <div id="df-e3fcbf0f-5c1e-47fe-8b31-b9951cbb8d71" class="colab-df-container">
-    <div>
+  <div id="df-e3fcbf0f-5c1e-47fe-8b31-b9951cbb8d71" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -2542,9 +1960,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-e3fcbf0f-5c1e-47fe-8b31-b9951cbb8d71')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -2620,7 +2038,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-615df325-3a36-4dac-935e-e87ce1e6789c">
+<div id="df-615df325-3a36-4dac-935e-e87ce1e6789c" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-615df325-3a36-4dac-935e-e87ce1e6789c')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -2748,150 +2166,98 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-</section>
-<section id="misc-metrics" class="level3">
-<h3 class="anchored" data-anchor-id="misc-metrics">Misc Metrics</h3>
-<div id="cell-37" class="cell" data-outputid="1b483538-c65c-4885-b0b3-216839be9ed8">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [ ] flag issues with more interactions (i.e. comments) than typical</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># NOTES:</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - this script excludes any issue with 0 comments</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>comment_avg <span class="op">=</span> np.mean([<span class="bu">len</span>(iss)<span class="cf">for</span> iss <span class="kw">in</span> comments])</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>comment_avg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="27">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="27">
 <pre><code>3.127429805615551</code></pre>
 </div>
 </div>
-<div id="cell-38" class="cell" data-outputid="90badcf1-1784-4a1f-af7b-6743ef177051">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#WELCOME, NEWCOMER!</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co">#YOU HAVE ENTERED THE FRONTIER OF ISSUE REPORTING.</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SOME OF IT WORKS. SOME OF IT MAY NOT. CAVEAT EMPTOR.</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] write another function to compute average interaction time across issues for every three months</span></span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="co"># NOTES:</span></span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="co"># - how should average interaction times per issue be sorted into 3-month batches? by date created or date closed?</span></span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="co"># - the following function defaults to quarterly arrangement according to date created.</span></span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="co"># - this function does not consider issues with no interactions. make separate metric/function for this?</span></span>
-<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="co"># - should this function also ignore issues that haven't been close?</span></span>
-<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="co"># - by ignoring issues still open, we could also sort issues quarterly basing this on date closed, rather than on date created.</span></span>
-<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="co">#as with issue_report, index 0 is current year, index 1 is last year, etc. until 2013</span></span>
-<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a><span class="co">#units are aggregate minutes and will remain so for the sake of visualization</span></span>
-<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>quarterly_response_time <span class="op">=</span> avg_time_quarterly(issue_report)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>/usr/local/lib/python3.10/dist-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
-  return _methods._mean(a, axis=axis, dtype=dtype,
-/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
-  ret = ret.dtype.type(ret / rcount)</code></pre>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-31-output-1.png" class="img-fluid quarto-dashboard-img-contain">
 </div>
 </div>
-</section>
-<section id="visuals" class="level3">
-<h3 class="anchored" data-anchor-id="visuals">Visuals</h3>
-<div id="cell-40" class="cell" data-outputid="ed91861c-9da4-417c-84ed-5dcad7ccc64f">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>legend <span class="op">=</span> [<span class="dv">2013</span> <span class="op">+</span> x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(issue_report))]</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>plot_line_avg_time(quarterly_response_time, years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-32-output-1.png" class="img-fluid quarto-dashboard-img-contain">
 </div>
 </div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-33-output-1.png" class="img-fluid quarto-dashboard-img-contain">
 </div>
-<div id="cell-41" class="cell" data-outputid="33f4b00d-16d6-4638-872a-7183fa8fde01">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [X] visualize issues left open per year, as of report request date</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># also clean up, mostly with jut better figure scaling, labeling</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>plot_open_issues(open_issues)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-32-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-34-output-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div>
 </div>
-<div id="cell-42" class="cell" data-outputid="ebc1c492-7626-45bc-e932-0b2f9b360be0">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I thought of some options, and I think stacked bars maybe a good hybrid approach;</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Basically, each bar represents a year, and the sections of the bar represent the number of issues opened in each quarter.</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [Val] good call! yea that helps for sure</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>issues_per_quarter <span class="op">=</span> issues_by_quarter(issue_report)</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>plot_issues_by_quarter(issues_per_quarter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-33-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="cell-43" class="cell" data-outputid="ab8ab0bd-7050-4652-a6de-0966d19c3703">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>plot_issues_by_comments(issue_report, issue_index)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-34-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="pr-reporting" class="level1">
-<h1><strong>PR Reporting</strong></h1>
+<div id="pr-reporting" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-pr-reporting">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
 <p>Note that most of these metrics will need cleaning up / fixing. They are buggy right now.</p>
-<section id="frames-1" class="level3">
-<h3 class="anchored" data-anchor-id="frames-1">Frames</h3>
-<div id="cell-46" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Big Cheese Numero Dos</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>pr_report <span class="op">=</span> report_frame(prs, pr_index, commented_issues, comments)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
-<div id="cell-47" class="cell" data-outputid="3672823a-c5b5-41b6-bafa-b864de4dfa7b">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>pr_response_quarterly <span class="op">=</span> avg_time_quarterly(pr_report)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>/usr/local/lib/python3.10/dist-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
-  return _methods._mean(a, axis=axis, dtype=dtype,
-/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
-  ret = ret.dtype.type(ret / rcount)</code></pre>
-</div>
-</div>
-<div id="cell-48" class="cell" data-outputid="55be5bdd-88e8-4d1e-b685-3277e5e5db5e">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>pr_report[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="35">
 
-  <div id="df-272cc940-0e17-4743-869e-46036b764af2" class="colab-df-container">
-    <div>
+  <div id="df-272cc940-0e17-4743-869e-46036b764af2" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -3011,9 +2377,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>67 rows × 6 columns</p>
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-272cc940-0e17-4743-869e-46036b764af2')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -3089,7 +2455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-301ba0ac-eb24-4e04-89b7-c3a107dd7d08">
+<div id="df-301ba0ac-eb24-4e04-89b7-c3a107dd7d08" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-301ba0ac-eb24-4e04-89b7-c3a107dd7d08')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -3217,16 +2583,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-49" class="cell" data-outputid="ebcc6ecc-14f7-4f75-e3c3-bae1d518300b">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>open_prs <span class="op">=</span> grab_open_issues(pr_report)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(open_prs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="36">
 
-  <div id="df-24fe96ca-314b-42ab-b7be-43a89afe34ed" class="colab-df-container">
-    <div>
+  <div id="df-24fe96ca-314b-42ab-b7be-43a89afe34ed" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -3310,9 +2677,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>127 rows × 3 columns</p>
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-24fe96ca-314b-42ab-b7be-43a89afe34ed')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -3388,7 +2755,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-1d5f53a8-cdf9-492c-b500-a921a56a51dd">
+<div id="df-1d5f53a8-cdf9-492c-b500-a921a56a51dd" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-1d5f53a8-cdf9-492c-b500-a921a56a51dd')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -3516,18 +2883,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-50" class="cell" data-outputid="b8385341-5201-4f47-b8cb-584c1f943a72">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>open_awhile(pr_report)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
 <pre><code>There are 2 issues which are left open for at least 3-5 years</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div class="cell-output cell-output-display html-fill-item html-fill-container" data-execution_count="37">
 
-  <div id="df-a79e4894-186e-4c60-aa19-90bb65ae2035" class="colab-df-container">
-    <div>
+  <div id="df-a79e4894-186e-4c60-aa19-90bb65ae2035" class="colab-df-container html-fill-item html-fill-container">
+    <div class="html-fill-item html-fill-container">
 
 
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -3565,9 +2934,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 
 </div>
-    <div class="colab-df-buttons">
+    <div class="colab-df-buttons html-fill-item html-fill-container">
 
-  <div class="colab-df-container">
+  <div class="colab-df-container html-fill-item html-fill-container">
     <button class="colab-df-convert" onclick="convertToInteractive('df-a79e4894-186e-4c60-aa19-90bb65ae2035')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
@@ -3643,7 +3012,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-<div id="df-0ae042ab-c5a5-41fe-9d17-6f0ad49664ea">
+<div id="df-0ae042ab-c5a5-41fe-9d17-6f0ad49664ea" class="html-fill-item html-fill-container">
   <button class="colab-df-quickchart" onclick="quickchart('df-0ae042ab-c5a5-41fe-9d17-6f0ad49664ea')" title="Suggest charts" style="display:none;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
@@ -3771,69 +3140,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-</section>
-<section id="visuals-1" class="level3">
-<h3 class="anchored" data-anchor-id="visuals-1">Visuals</h3>
-<div id="cell-52" class="cell" data-outputid="3b2ac0b0-2a44-4a07-a744-1bee28b1757d">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>plot_line_avg_time(pr_response_quarterly, legend)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-40-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-40-output-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-41-output-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<img src="ReportScript_files/figure-html/cell-42-output-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div>
 </div>
-<div id="cell-53" class="cell" data-outputid="d390f2fc-a43f-4a5d-f4ec-780d2bdcf717">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Major problem here: there should absolutely be data to report in this year</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>prs_per_quarter <span class="op">=</span> issues_by_quarter(pr_report)</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>plot_issues_by_quarter(prs_per_quarter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-41-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="cell-54" class="cell" data-outputid="95a02acb-fb1c-4c0b-f1b7-ac2ad973b390">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>plot_issues_by_comments(pr_report, pr_index)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ReportScript_files/figure-html/cell-42-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="generating-reports-w-quarto" class="level1">
-<h1><strong>Generating Reports w/ Quarto</strong></h1>
+<div id="generating-reports-w-quarto" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-generating-reports-w-quarto">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
 <p>The idea is to create a github workflow that’ll run a host of GHA that will use our script to fetch and update data and publish a refresh our dashboard/report.</p>
 <p>Things that I’m unsure about:</p>
 <ul>
 <li>What/how will the deployment look like? It’ll use Quarto, but are we planning to have a PDF</li>
 </ul>
-<section id="what-are-some-important-metrics-to-showcase" class="level3">
-<h3 class="anchored" data-anchor-id="what-are-some-important-metrics-to-showcase">What are some important metrics to showcase?</h3>
-</section>
-<section id="what-are-some-important-visualizations-to-showcase" class="level3">
-<h3 class="anchored" data-anchor-id="what-are-some-important-visualizations-to-showcase">What are some important visualizations to showcase?</h3>
-</section>
-</section>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: ;
+grid-auto-rows: minmax(0, 1fr);">
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
 
-</main>
-<!-- /main column -->
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -4251,8 +3630,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+</div> <!-- /container fluid -->
 
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 
